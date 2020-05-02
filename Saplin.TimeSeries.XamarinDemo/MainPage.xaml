@@ -71,6 +71,5 @@
                 </ctrl:TimeSeries.FontFamily>
          </ctrl:TimeSeries>
 
-
     </StackLayout>
 </ContentPage>

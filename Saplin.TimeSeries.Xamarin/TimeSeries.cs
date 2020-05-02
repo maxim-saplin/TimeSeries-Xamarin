@@ -317,7 +317,7 @@ namespace Saplin.TimeSeries.Xamarin
             });
 
         /// <summary>
-        /// Bind to ViewModel proprty implementing INotifyPropertyChange and trigger PropertyChanged event on it in order to get the control rerendered
+        /// Bind any property in ViewModel and the control will be rerendered whenever property value is changed
         /// </summary>
         public object UpdateTrigger { get => GetValue(UpdateTriggerProperty); set => SetValue(UpdateTriggerProperty, value); }
 
