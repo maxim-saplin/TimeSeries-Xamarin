@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:ctrl="clr-namespace:Saplin.TimeSeries.Xamarin;assembly=Saplin.TimeSeries.Xamarin" 
+    mc:Ignorable="d" 
+    x:Class="Saplin.TimeSeries.XamarinDemo.MainPage"
+    NavigationPage.HasNavigationBar="False" 
+    NavigationPage.HasBackButton="False"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="True">
+     <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="waveTimeSeriesStyle" TargetType="ctrl:TimeSeries">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="HeigthLines" Value="12"/>
+                <Setter Property="EmptyChar" Value="×"/>
+                <Setter Property="AbovePointChar" Value=" " />
+                <Setter Property="BelowPointChar" Value="·" />
+                <Setter Property="Margin" Value="10, 10, 5, 10" />
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="macOS">Menlo</On>
+                            <On Platform="WPF">Consolas</On>
+                            <On Platform="Android">Menlo</On>
+                            <On Platform="iOS">SourceCodePro</On>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Margin="0, 25, 0, 0">
+
+        <Label Text="ObservableCollection updating every 0.25 seconds" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+        <!-- Default fonts except Android -->
+        <ctrl:TimeSeries x:Name="waveTimeSeries" BackgroundColor="#FFBBBBBB" Style="{StaticResource waveTimeSeriesStyle}" >
+                <ctrl:TimeSeries.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <!-- Override Android only, iOS, macOS and WPF are fine with standard fonts-->
+                        <On Platform="Android">SourceCodePro</On>
+                    </OnPlatform>
+                </ctrl:TimeSeries.FontFamily>
+            <!-- TimeSeries is Grid layout, it can have child controls added-->
+            <Label x:Name="waveValue" Text="123" Padding="5,5,5,5" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="#99BBBBBB"/>
+         </ctrl:TimeSeries>
+
+        
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+             <Button x:Name="collectionTypeButton" Text="Showing Random" Clicked="collectionTypeButton_Clicked" HorizontalOptions="Center" />
+             <Button x:Name="addDataButton" Text="+Add Points" Clicked="addDataButton_Clicked" HorizontalOptions="Center" />
+             <Button x:Name="switchAllTailButton" Text="Showing Tail" Clicked="switchAllTailButton_Clicked" HorizontalOptions="Center" />
+        </StackLayout>
+        <!-- With custom font on Android and iOS, auto height (HeigthLines=0)-->
+        <ctrl:TimeSeries x:Name="timeSeries" BackgroundColor="#FFBBBBBB" FontSize="10" Margin="10, 5, 10, 10"
+                            HeigthLines="0" VerticalOptions="FillAndExpand">
+                <ctrl:TimeSeries.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="macOS">Menlo</On>
+                        <On Platform="WPF">Consolas</On>
+                        <On Platform="Android">SourceCodePro</On>
+                        <On Platform="iOS">SourceCodePro</On>
+                    </OnPlatform>
+                </ctrl:TimeSeries.FontFamily>
+         </ctrl:TimeSeries>
+
+
+    </StackLayout>
+</ContentPage>
