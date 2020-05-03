@@ -217,8 +217,8 @@ namespace Saplin.TimeSeries
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void ConnectDots(double max, double bucket, int col, double currVal, double nextVal)
         {
-            var curRow = (int)Math.Round((max - currVal) / bucket);
-            var nextRow = (int)Math.Round((max - nextVal) / bucket);
+            var curRow = (int)Math.Round((max - currVal) / bucket, MidpointRounding.AwayFromZero);
+            var nextRow = (int)Math.Round((max - nextVal) / bucket, MidpointRounding.AwayFromZero);
             var diff = nextRow - curRow;
 
             if (curRow == nextRow && curRow >= 0 && curRow < plotRows)

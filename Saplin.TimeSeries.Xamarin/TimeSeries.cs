@@ -38,7 +38,7 @@ namespace Saplin.TimeSeries.Xamarin
             // Magic numbers, calculating width chars across platforms is a bit messy, empirically found some extra width to make chart claculated width fitting the container
             if (Device.RuntimePlatform == Device.iOS) { widthFix = 8; heightFix = 4; }
             else if (Device.RuntimePlatform == Device.macOS) widthFix = 4;
-            //else if (Device.RuntimePlatform == Device.Android) widthFix = 4;
+            else if (Device.RuntimePlatform == Device.Android) widthFix = 4;
         }
 
         double widthFix = 0;
