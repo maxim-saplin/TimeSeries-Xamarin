@@ -1,4 +1,4 @@
-21KB library (compared to at least 8MB with any SkiaSharp based chart control).
+21KB .NET Standard library (compared to at least 8MB with any SkiaSharp based chart control).
 
 A visual element built purely on top of Xamarin.Forms controls (no platform renderers or platform-specific code) that displays ASCII time series chart via multi-line monospaced Label wrapped in a Grid. The control can resize to adapt to it's container. It was tested on Android, iOS, macOS and WPF though should work fine across Xamarin.Froms supported platforms.
 
