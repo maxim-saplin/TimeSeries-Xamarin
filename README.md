@@ -3,13 +3,15 @@
 A visual element built purely on top of Xamarin.Forms controls (no platform renderers or platform-specific code) that displays ASCII time series chart via multi-line monospaced Label wrapped in a Grid. The control can resize to adapt to it's container. It was tested on Android, iOS, macOS and WPF though should work fine across Xamarin.Froms supported platforms.
 
 
-# Using
-1. Add [Nuget](https://www.nuget.org/packages/Saplin.TimeSeries.Xamarin/) package or reference to `Saplin.TimeSeries.Xamarin.dll` library from the [Releases](https://github.com/maxim-saplin/TimeSeries-Xamarin/releases) to your Xamarin.Forms UI project
+# Usage
+1. Add [Nuget](https://www.nuget.org/packages/Saplin.TimeSeries.Xamarin/) package or reference to `Saplin.TimeSeries.Xamarin.dll` library (check [Releases](https://github.com/maxim-saplin/TimeSeries-Xamarin/releases)) to your Xamarin.Forms UI project
+
 2. Add XAML reference to control's namespace in a view file:
 ```
 <ContentPage 
     xmlns:ctrl="clr-namespace:Saplin.TimeSeries.Xamarin;assembly=Saplin.TimeSeries.Xamarin" ...
 ```
+
 3. Add control to XAML, adjust the looks:
 ```
 <ctrl:TimeSeries x:Name="timeSeries" BackgroundColor="#FFBBBBBB" FontSize="10" Margin="10, 5, 10, 10"
