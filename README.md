@@ -28,7 +28,7 @@ timeSeries.Series = GenerateRandom(counter);
 
 Check the demo project in this repo.
 
-# Monospaced Fonts
-It is important to use a monospaced font (set via `FontFamily` property) that has all the ASCII box chars and misc chars (e.g. set in `AbovePointChar` property) to have the control properly displayed. Default font family works fine on iOS, macOS and WPF. Default Android's `monospace` font is NOT OK. You can use [Source Code Pro](https://github.com/maxim-saplin/TimeSeries-Xamarin/blob/master/Saplin.TimeSeries.XamarinDemo/SourceCodePro-Regular.ttf) font and import it like [that](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/fonts#use-a-custom-font) (iOS, Android) or [that](http://saplin.blogspot.com/2018/12/xamarinforms-custom-fonts-with-android.html) (macOS, WPF).
+# Monospaced Font
+It is important to use a monospaced font (set via `FontFamily` property) that has all the ASCII box chars (`╭│╯─┤ `) and misc chars (e.g. `·` set in `AbovePointChar` property) to have the control properly displayed. Default font family works fine on iOS, macOS and WPF. Default Android's `monospace` font is NOT OK. You can use [Source Code Pro](https://github.com/maxim-saplin/TimeSeries-Xamarin/blob/master/Saplin.TimeSeries.XamarinDemo/SourceCodePro-Regular.ttf) font and import it like [that](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/fonts#use-a-custom-font) (iOS, Android) or [that](http://saplin.blogspot.com/2018/12/xamarinforms-custom-fonts-with-android.html) (macOS, WPF).
 
 ![UI](https://github.com/maxim-saplin/TimeSeries-Xamarin/blob/master/TimeSeries-Xamarin.gif?raw=true)
