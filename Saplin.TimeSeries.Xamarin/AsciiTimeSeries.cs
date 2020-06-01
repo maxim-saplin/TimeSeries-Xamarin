@@ -88,8 +88,31 @@ namespace Saplin.TimeSeries
 
         bool builtUsingShrink = false;
 
+        private double GetMin(IList<double> seriesModifiable, int n)
+        {
+            var min = double.MaxValue;
+
+            for (int i = 0; i < n; i++)
+                if (seriesModifiable[i] < min)
+                    min = seriesModifiable[i];
+
+            return min;
+        }
+
+        private double GetMax(IList<double> seriesModifiable, int n)
+        {
+            var max = double.MinValue;
+
+            for (int i = 0; i < n; i++)
+                if (seriesModifiable[i] > max)
+                    max = seriesModifiable[i];
+
+            return max;
+        }
+
         void BuildGraph()
         {
+            //Treat i ENumerable and IList differently. IList is OK if it is modified in separate thread and number of elements in collection changes, no exception in foreach
             IEnumerable<double> series = Series;
             IList<double> seriesModifiable = Series as IList<double>;
             var count = series != null ? series.Count() : seriesModifiable.Count;
@@ -100,8 +123,8 @@ namespace Saplin.TimeSeries
 
             if (Min.HasValue && Max.HasValue && Min >= Max) throw new InvalidOperationException("TimeSeries.Max must be greater than TimeSeries.Min");
 
-            var min = Min.HasValue ? Min.Value : series.Min();
-            var max = Max.HasValue ? Max.Value : series.Max();
+            var min = Min.HasValue ? Min.Value : seriesModifiable != null ? GetMin(seriesModifiable,count) : series.Min();
+            var max = Max.HasValue ? Max.Value : seriesModifiable != null ? GetMax(seriesModifiable, count) : series.Max();
 
             if (min > max) { max = min; min = max; } // swap min/max in one of the points is fixed, another calculated and they happen to be at odds
 
@@ -320,7 +343,7 @@ namespace Saplin.TimeSeries
         {
             plotRows = rows;
             plotCols = cols;
-            //if plot matrix happens to be bigger than needed, keep it and stor only the bound
+            //if plot matrix happens to be smaller than needed, recreate it
             if (plot == null || plot.GetUpperBound(0) + 1 < rows || plot.GetUpperBound(1) + 1 < cols)
                 plot = new char[rows, (int)Math.Ceiling(cols/(double)plotGrowByCols)*plotGrowByCols];
 
