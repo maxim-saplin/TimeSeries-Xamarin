@@ -6,13 +6,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saplin.TimeSeries.XamarinDe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Saplin.TimeSeries.XamarinDemo", "Saplin.TimeSeries.XamarinDemo\Saplin.TimeSeries.XamarinDemo.csproj", "{AE290BA2-7A52-4FA6-ADB8-4DDE03E5FBA4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Saplin.TimeSeries.Xamarin", "Saplin.TimeSeries.Xamarin\Saplin.TimeSeries.Xamarin.csproj", "{23AAEAD1-6E1E-4C66-B472-4A53B1FAB7F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saplin.TimeSeries.Xamarin", "Saplin.TimeSeries.Xamarin\Saplin.TimeSeries.Xamarin.csproj", "{23AAEAD1-6E1E-4C66-B472-4A53B1FAB7F8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saplin.TimeSeries.XamarinDemo.Mac", "Saplin.TimeSeries.XamarinDemo.Mac\Saplin.TimeSeries.XamarinDemo.Mac.csproj", "{D107ADBC-53F5-4FD3-9715-2672FE58DC6E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saplin.TimeSeries.XamarinDemo.iOS", "Saplin.TimeSeries.XamarinDemo.iOS\Saplin.TimeSeries.XamarinDemo.iOS.csproj", "{08E0823E-439C-465B-83F1-3C0D2F5B9503}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "Saplin.TimeSeries.XamarinDemo.WPF", "Saplin.TimeSeries.XamarinDemo.WPF\Saplin.TimeSeries.XamarinDemo.WPF.csproj", "{2CC2B5FB-382D-471E-B3E0-26A17E3D108C}"
+Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "Saplin.TimeSeries.XamarinDemo.WPF", "Saplin.TimeSeries.XamarinDemo.WPF\Saplin.TimeSeries.XamarinDemo.WPF.csproj", "{A2F91551-18AC-4612-870C-0D1B4FA2DB48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -84,18 +84,18 @@ Global
 		{08E0823E-439C-465B-83F1-3C0D2F5B9503}.Release|iPhone.Build.0 = Release|iPhone
 		{08E0823E-439C-465B-83F1-3C0D2F5B9503}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{08E0823E-439C-465B-83F1-3C0D2F5B9503}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
-		{2CC2B5FB-382D-471E-B3E0-26A17E3D108C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2CC2B5FB-382D-471E-B3E0-26A17E3D108C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2CC2B5FB-382D-471E-B3E0-26A17E3D108C}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{2CC2B5FB-382D-471E-B3E0-26A17E3D108C}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{2CC2B5FB-382D-471E-B3E0-26A17E3D108C}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{2CC2B5FB-382D-471E-B3E0-26A17E3D108C}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{2CC2B5FB-382D-471E-B3E0-26A17E3D108C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2CC2B5FB-382D-471E-B3E0-26A17E3D108C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2CC2B5FB-382D-471E-B3E0-26A17E3D108C}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{2CC2B5FB-382D-471E-B3E0-26A17E3D108C}.Release|iPhone.Build.0 = Release|Any CPU
-		{2CC2B5FB-382D-471E-B3E0-26A17E3D108C}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{2CC2B5FB-382D-471E-B3E0-26A17E3D108C}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{A2F91551-18AC-4612-870C-0D1B4FA2DB48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2F91551-18AC-4612-870C-0D1B4FA2DB48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2F91551-18AC-4612-870C-0D1B4FA2DB48}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{A2F91551-18AC-4612-870C-0D1B4FA2DB48}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{A2F91551-18AC-4612-870C-0D1B4FA2DB48}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{A2F91551-18AC-4612-870C-0D1B4FA2DB48}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{A2F91551-18AC-4612-870C-0D1B4FA2DB48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2F91551-18AC-4612-870C-0D1B4FA2DB48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2F91551-18AC-4612-870C-0D1B4FA2DB48}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{A2F91551-18AC-4612-870C-0D1B4FA2DB48}.Release|iPhone.Build.0 = Release|Any CPU
+		{A2F91551-18AC-4612-870C-0D1B4FA2DB48}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{A2F91551-18AC-4612-870C-0D1B4FA2DB48}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Maxim Saplin</Authors>
-    <ReleaseVersion>1.0.0</ReleaseVersion>
+    <ReleaseVersion>1.0.1</ReleaseVersion>
     <SynchReleaseVersion>false</SynchReleaseVersion>
     <Copyright>Maxim Saplin</Copyright>
     <Owners>Maxim Saplin</Owners>
@@ -13,9 +13,10 @@
     <PackageId>Saplin.TimeSeries.Xamarin</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Summary>Visual element built purely on top of Xamarin.Forms controls (no platform renderers or platform-specific code) that displays ASCII time series chart via multi-line monospaced Label wrapped in a Grid. The control can resize to adapt to it's container. It was tested on Android, iOS, macOS and WPF though should work fine across Xamarin.Froms supported platforms</Summary>
+    <PackageVersion>1.0.1</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.847" />
   </ItemGroup>
 </Project>
